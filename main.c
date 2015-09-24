@@ -1,5 +1,8 @@
+#define GLEW_STATIC
+
 #include <windows.h>
-#include <gl/gl.h>
+#include <gl/glew.h>
+#include <stdio.h>
 
 LRESULT CALLBACK WindowProc(HWND, UINT, WPARAM, LPARAM);
 void EnableOpenGL(HWND hwnd, HDC*, HGLRC*);
@@ -167,6 +170,10 @@ void EnableOpenGL(HWND hwnd, HDC* hDC, HGLRC* hRC)
     *hRC = wglCreateContext(*hDC);
 
     wglMakeCurrent(*hDC, *hRC);
+    glewExperimental = TRUE;
+    if(glewInit() != GLEW_OK) {
+        fprintf(stderr, "Failed to initialize GLEW\n");
+    } else printf("Glew initialization successful!\n");
 }
 
 void DisableOpenGL (HWND hwnd, HDC hDC, HGLRC hRC)

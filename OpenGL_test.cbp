@@ -21,11 +21,11 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="C:/Users/Michael/Desktop/TKE_TEST/include" />
 		</Compiler>
 		<Linker>
+			<Add library="lib\libglew32.a" />
 			<Add library="opengl32" />
-			<Add library="glu32" />
-			<Add library="gdi32" />
 		</Linker>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

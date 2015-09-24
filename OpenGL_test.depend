@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1443123977 source:c:\users\michael\desktop\tke_test\main.c
+	<windows.h>
+	<gl/glew.h>
+	<stdio.h>
+
+1442941438 c:\users\michael\desktop\tke_test\include\gl\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<Availability.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
